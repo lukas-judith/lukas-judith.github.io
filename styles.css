@@ -50,6 +50,7 @@ p {
 .project-list {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 13rem; /* Add some bottom margin to create whitespace */
 }
 
 .project-list li {

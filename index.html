@@ -1,21 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lukas Judith</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a287b5745a.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <img src="imgs/profile_pic.jpg" alt="Your Name" class="profile-image">
-        <h1>Lukas Judith</h1>
-        <p>AI, Data Science, and Data Engineering</p>
-        <div class="links">
-            <a href="projects.html">Projects</a>
-            <a href="https://www.linkedin.com/in/lukas-judith/" target="_blank">LinkedIn</a>
-            <a href="resume_lukas_judith.pdf" target="_blank">Resume</a>
+    <div class="top-bar">
+        <div class="top-bar-links">
+            <a href="#home">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#projects">Projects</a>
         </div>
     </div>
+    <section id="home" class="container">
+        <div class="home-content">
+            <img src="imgs/profile_pic.jpg" alt="Your Name" class="profile-image">
+            <div class="home-text">
+              <h1>Lukas Judith</h1>
+              <p>AI, Data Science, and Data Engineering</p>
+              <div class="links">
+                <a href="#about-me">About Me</a>
+                <a href="#projects">Projects</a>
+              </div>
+              <div class="links_symbols">
+                <a href="https://www.linkedin.com/in/lukas-judith/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/lukas-judith" target="_blank"><i class="fab fa-github"></i></a>
+                <span><a href="resume_lukas_judith.pdf" target="_blank" class="cv-link">CV</a></span>
+                <a href="mailto:lukasjudith12@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-me" class="container">
+        <h2>About Me</h2>
+        <p>I am a highly motivated data scientist with experience in AI, data engineering, and data science. My passion for problem-solving and innovation drives me to constantly improve my skills and create meaningful solutions for complex challenges. In my free time, I enjoy working on personal projects and exploring the latest developments in the field of machine learning and AI.</p>
+    </section>
+    <section id="projects" class="container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-panel">
+                <a href="https://github.com/lukas-judith/brain-tumor-classification" target="_blank">Brain Tumor Classification with Deep Learning</a>
+                <p>In this project, I implemented and trained a convolutional neural network (CNN) to classify brain tumors in a Kaggle image dataset.</p>
+            </div>
+            <div class="project-panel">
+                <a href="https://github.com/lukas-judith/grid-based-k-function" target="_blank">Spatial Statistical Analysis of Cell Images</a>
+                <p>This project features a grid-based approximation of Ripley's K-function for analysing point patterns in images.</p>
+            </div>
+            <div class="project-panel">
+                <a href="https://github.com/lukas-judith/non-stationary-dynamical-systems-benchmarks" target="_blank">Generation of Non-Stationary Dynamical Systems</a>
+                <p>This code generates benchmark systems for non-stationary dynamical systems reconstruction with recurrent neural networks.</p>
+            </div>
+            <div class="project-panel">
+                <a href="https://github.com/lukas-judith/interview-assistant" target="_blank">Interview Assistant</a>
+                <p>This program takes a list of question stored in .md format and simulates an interview or oral exam.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.top-bar-links a, .links a').forEach(link => {
+          link.addEventListener('click', function (event) {
+            
+            event.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const startPosition = window.pageYOffset;
+            const distance = targetElement.getBoundingClientRect().top - 50; // Subtract the height of the top bar
+            let startTime = null;
+      
+            const duration = Math.abs(distance) * 1.0; // Adjust the scrolling duration based on distance (e.g., 1.5ms per pixel)
+      
+            function easing(t) {
+                return (1 - Math.cos(t * Math.PI)) / 2;
+            }
+      
+            function animation(currentTime) {
+              if (startTime === null) startTime = currentTime;
+              const timeElapsed = currentTime - startTime;
+              const progress = timeElapsed / duration;
+              window.scrollTo(0, startPosition + distance * easing(progress));
+              if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+      
+            requestAnimationFrame(animation);
+          });
+        });
+      </script>
 </body>
+
 </html>

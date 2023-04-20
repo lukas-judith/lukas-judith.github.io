@@ -9,7 +9,7 @@ body {
 
 h1 {
     font-size: 55px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
     margin-top: 0rem;
 }
 
@@ -121,6 +121,7 @@ p {
 
 /* Center and style the container */
 .container {
+    min-height: 100vh;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -290,6 +291,12 @@ p {
     .container {
     max-width: 100%;
     height: auto;
+    max-height: auto;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
     }
     
     .home-content {
@@ -320,6 +327,8 @@ p {
 
     section {
         min-height: 100vh;
+        max-height: auto;
+        overflow: visible;
     }
 
 }

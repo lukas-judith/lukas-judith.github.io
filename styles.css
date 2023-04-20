@@ -233,31 +233,49 @@ p {
 @media only screen and (max-width: 900px) {
     /* Adjust font sizes */
     h1 {
-    font-size: 40px;
-    }
-    h2 {
-    font-size: 35px;
-    margin-bottom: 1rem;
-    }
-    p {
-    font-size: 20px;
-    margin-bottom: 0.75rem;
-    }
-    .top-bar-links {
-    font-size: 18px;
-    }
-    .links {
-    font-size: 20px;
+    font-size: 34px;
+    margin-top: 0rem;
     }
 
-    .intro h1 {
-    font-size: 24px;
-    margin-bottom: 0.25rem;
+    h2 {
+    font-size: 26px;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
     }
-    .intro p {
-    font-size: 20px;
-    margin: 0.25rem 0;
+
+    p {
+    font-size: 16px;
+    margin-bottom: 0.75rem;
     }
+
+    .top-bar-links {
+    font-size: 15px;
+    }
+
+    .top-bar a {
+        margin: 1rem 1rem;
+    }
+
+    .home-content {
+        width: 140%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 2rem;
+        margin-left: -20%;
+        margin-top: 3rem;
+    }
+
+    .links {
+    font-size: 14px;
+    }
+
+    .intro {
+        margin-top: 2rem;
+    }
+
     #about-me p {
     font-size: 20px;
     }
@@ -273,10 +291,12 @@ p {
     max-width: 100%;
     height: auto;
     }
+    
     .home-content {
     width: 100%;
     margin-left: 0;
     }
+
     .projects-grid {
     width: 100%;
     grid-template-columns: 1fr;
@@ -284,6 +304,7 @@ p {
     margin-right: 0;
     margin-top: 0.5rem;
     }
+
     .project-panel {
     margin-left: 0;
     margin-right: 0;
@@ -297,26 +318,6 @@ p {
     justify-content: center;
     }
 
-    .top-bar a {
-        margin: 1rem 1rem;
-    }
-    
-    /* Adjust introductory section */
-    .intro {
-        margin-top: 2rem;
-    }
-    
-    .home-content {
-        width: 140%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: 2rem;
-        margin-left: -20%;
-        margin-top: 3rem;
-    }
     section {
         min-height: 100vh;
     }

@@ -119,6 +119,15 @@ p {
     background-color: #e0e0e0; /* Change the background color on hover */
 }
 
+.in-text-link {
+    color: #db7836;
+    text-decoration: none;
+}
+
+.in-text-link:hover {
+    text-decoration: underline;
+}
+
 /* Center and style the container */
 .container {
     min-height: 100vh;
@@ -177,7 +186,7 @@ p {
 #about-me p {
     display: block;
     text-align: justify;
-    font-size: 24px;
+    font-size: 23px;
   }
 
 .projects-grid {
@@ -278,7 +287,7 @@ p {
     }
 
     #about-me p {
-    font-size: 20px;
+    font-size: 16px;
     }
     .project-panel a {
     font-size: 20px;

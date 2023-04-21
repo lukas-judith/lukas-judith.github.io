@@ -124,7 +124,16 @@ p {
     text-decoration: none;
 }
 
+.in-text-link-CV {
+    color: #db7836;
+    text-decoration: none;
+}
+
 .in-text-link:hover {
+    text-decoration: underline;
+}
+
+.in-text-link-CV:hover {
     text-decoration: underline;
 }
 
